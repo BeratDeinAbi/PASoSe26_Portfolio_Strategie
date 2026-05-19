@@ -1,0 +1,41 @@
+portfolio:
+  tickers:
+    - AAPL
+    - NVDA
+    - AMZN
+    - PG
+    - UPS
+    - XOM
+    - JPM
+    - JNJ
+
+period:
+  start: "2017-01-01"
+  end: "2026-03-31"
+
+sub_samples:
+  pre_corona:
+    start: "2017-01-01"
+    end: "2019-12-31"
+  crisis_recovery:
+    start: "2020-01-01"
+    end: "2022-12-31"
+  ai_boom:
+    start: "2023-01-01"
+    end: "2026-03-31"
+
+backtest:
+  monthly_budget_usd: 750.0
+  initial_capital_usd: 0.0
+  transaction_fee_usd: 1.0
+  fractional_shares: true
+  allow_short: false
+  allow_leverage: false
+
+random_seed: 42
+
+paths:
+  data_raw: "data/raw"
+  data_interim: "data/interim"
+  data_processed: "data/processed"
+  figures: "reports/figures"

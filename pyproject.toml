@@ -1,0 +1,38 @@
+[project]
+name = "portfolio-oracle"
+version = "0.1.0"
+description = "Ex-post-optimale Portfolio-Strategie als Benchmark"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "yfinance>=0.2.40",
+    "cvxpy>=1.5",
+    "scikit-learn>=1.5",
+    "xgboost>=2.0",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+    "jupyter>=1.0",
+    "ipykernel>=6.29",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
